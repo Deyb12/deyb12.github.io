@@ -93,6 +93,7 @@ integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7
   }
   /* Editor */
   #editor-wrapper {
+    display: none;
     position: relative;
     width: 100%;
     max-width: 85ch;
@@ -157,7 +158,7 @@ integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7
     overflow: visible;
   }
   .page-footer {
-    margin: 2em 0 0 0;
+    margin: em 0 0 0;
     padding: 1.1em;
     border-top: 1px solid #ddd;
     background: hsl(0, 0%, 96%);
@@ -205,13 +206,11 @@ integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7
 <body>
   <div class="container-fluid">
     <div class="navbar-form navbar-left">
-      <!-- Document Menu -->
-      <select id="tm-doc-menu" class="form-control"></select>
       <!-- Edit Menu -->
       <div class="btn-group">
         <ul class="dropdown-menu">
-          <li><a href="#" id="tm-doc-action-duplicate">Duplicate document&hellip;</a></li>
-          <li><a href="#" id="tm-doc-action-newblank">New blank document&hellip;</a></li>
+          <li><a href="#" id="tm-doc-action-duplicate"></a></li>
+          <li><a href="#" id="tm-doc-action-newblank"></a></li>
           <li role="separator" class="divider"></li>
           <!-- "Rename" saves when closed, so don't allow closing with Esc -->
           <li><a href="#" data-toggle="modal" data-keyboard="false"
@@ -285,9 +284,9 @@ integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7
 
 
 <!-- Main Content -->
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div id="diagram-column" class="col-md-7 form-group text-center">
+    <div id="diagram-column" class="col-md-11 form-group text-center">
       <!-- Diagram -->
       <div id="machine-container" class="form-group">
         <!-- Noscript notice -->
@@ -304,24 +303,29 @@ integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7
       </div>
       <!-- Simulator controls -->
       <div id="controls-container" class="row text-center">
-        <div class="col-xs-1">
-          <button type="button" class="btn btn-warning btn-xs text-center tm-btn-diagram tm-reset">
+        <div class="col-xs-2 col-xs-offset-2 text-center">
+          <!-- Document Menu -->
+         <select id="tm-doc-menu" class="form-control"></select>
+        </div>
+        <div class="col-xs-1 col-xs-offset-1 text-center">
+          <button type="button" class="btn btn-danger text-center tm-btn-diagram tm-reset">
             <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span><br>
             Reset
           </button>
         </div>
-        <div class="col-xs-2 col-xs-offset-4 text-center">
+        <div class="col-xs-1">
           <button type="button" class="btn btn-primary text-center tm-btn-diagram tm-step">
             <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span><br>
             Step
           </button>
         </div>
         <div class="col-xs-1">
-          <button type="button" class="btn btn-default text-center tm-btn-diagram tm-run">
+          <button type="button" class="btn btn-success text-center tm-btn-diagram tm-run">
             <span class="glyphicon glyphicon-play" aria-hidden="true"></span><br>
             Run
           </button>
         </div>
+        
       </div>
     </div>
 

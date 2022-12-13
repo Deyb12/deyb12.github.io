@@ -1,5 +1,5 @@
 .tape-cell > rect {
-  fill: lightyellow;
+  fill: white;
   stroke: gray;
 }
 
@@ -14,5 +14,6 @@
 
 #tape-head {
   fill: none;
-  stroke: red;
+  stroke: #fb8b23;
+  stroke-width: 3;
 }

@@ -12,8 +12,9 @@
 }
 
 .current-state {
-  stroke: red;
-  stroke-width: 3px;
+  stroke: #fb8b23;
+  stroke-width: 8px;
+  stroke-dasharray: 3;
 }
 
 text {
@@ -22,9 +23,9 @@ text {
 }
 
 .nodelabel {
-  font-size: 10px;
+  font-size: 12px;
   stroke: black;
-  stroke-width: 0.1;
+  stroke-width: 0.3;
 }
 
 .edgelabel {
@@ -40,7 +41,7 @@ text {
 }
 
 .edgepath.active-edge {
-  stroke: red;
+  stroke: #fb8b23;
 }
 
 #arrowhead, #reversed-arrowhead {
@@ -49,6 +50,6 @@ text {
 }
 
 #active-arrowhead, #reversed-active-arrowhead {
-  stroke: red;
-  fill: red;
+  stroke: #fb8b23;
+  fill: #fb8b23;
 }
