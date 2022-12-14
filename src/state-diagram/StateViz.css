@@ -1,0 +1,55 @@
+.machine {
+  text-align: center;
+}
+
+.machine > svg {
+  display: block;
+  margin: auto;
+}
+
+.node {
+  cursor: move;
+}
+
+.current-state {
+  stroke: #fb8b23;
+  stroke-width: 8px;
+  stroke-dasharray: 3;
+}
+
+text {
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.nodelabel {
+  font-size: 12px;
+  stroke: black;
+  stroke-width: 0.3;
+}
+
+.edgelabel {
+  font-size: 10px;
+  fill: #aaa;
+  letter-spacing: 0.2em;
+}
+
+.edgepath {
+  stroke: #ccc;
+  fill: none;
+  pointer-events: none;
+}
+
+.edgepath.active-edge {
+  stroke: #fb8b23;
+}
+
+#arrowhead, #reversed-arrowhead {
+  stroke: #ccc;
+  fill: #ccc;
+}
+
+#active-arrowhead, #reversed-active-arrowhead {
+  stroke: #fb8b23;
+  fill: #fb8b23;
+}
